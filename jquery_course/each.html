@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Each function : each()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <script>
+        $(document).ready(function()
+        {
+            //cach 1 
+
+            /*
+            $('li').each(function(){
+                alert($(this).text())
+            }
+            )
+            */
+            // truyen vao 2 tham so mawc dinh la in dex va tham so element
+
+            /*
+            $('li').each(function(index, element){
+                alert('index: '+ index + ' element: '+ $(element).text())
+            }
+            )
+
+            */ 
+
+            // vong lap each ket hop if 
+            /*
+            $('li').each(function(index, element){
+                if($(this).text() =='Python')
+                {
+                    return false; // dung return false ngat vong lap for 
+                }
+                $(this).css('color', 'red');
+            }
+            )
+            */
+
+            // toi uu performan 
+
+            /*
+            var result = " ";
+            $('li').each(function(index, element){
+                    result += $(this).text() + "<br>";
+            }
+            )
+
+            $("#result").html(result);
+
+            */
+
+
+            //method chaining
+             /*
+            $('li').css('color', 'blue');
+            $('li').slideUp(1000);
+            $('li').slideDown(1000);
+            $('li').attr('title','ok');
+            */
+
+            $('li').css('color', 'blue').slideUp(1000).slideDown(1000).attr('title','ok');
+
+
+
+
+        });
+    </script>
+
+    <ul>
+        <li>PHP</li>
+        <li>C/C++</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
+<br>
+ <div id = "result"> </div>
+    
+</body>
+</html>

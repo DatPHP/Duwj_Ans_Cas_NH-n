@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get thuoc tinh thong qua attribute</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .add-border
+        {
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            //add class cho tat ca cac selector co thuoc tinh title
+            //$('[title]').addClass('add-border');
+
+            // add class cho tat ca cac selector co thuoc tinh title = 'div1'
+            //$('[title = "div1"]').addClass('add-border');
+
+            // add class cho tat ca cac selector span ma co thuoc tinh title
+            //$('span[title]').addClass('add-border');
+
+            // query theo 2 thuoc tinh  title va style 
+            //$('[title = "div1"] [style = "background-color:yellow;"]').addClass('add-border');
+
+
+            //query theo selector co class la demo1 va co thuoc tinh title ="demo1"
+            $('.demo1[title = "demo1"]').addClass('add-border');
+
+              //query theo selector co class la demo1 va co thuoc tinh title ="demo1" trong selector con
+              $('.demo1 [title = "demo1"]').addClass('add-border');
+
+              alert($('.demo1[title = "demo1"]').data('id'));
+
+
+              //thuoc tinh data lay gia tri id (data-id) :  == > data('id')
+        })
+    </script>
+    <div class='demo1' title = 'demo1' data-id = 1 style = "background-color:yellow;">
+        <span class="" title = "div">THis is First</span>
+    </div>
+    <div class = "demo" title = "div2">
+        <span class="" > This is secord</span>
+    </div>
+    <div class = "demo" title = "div3">
+        <span class=""> This is Third </span>
+    </div>
+    <div class = "demo" title = "div4"> 
+        <span class="">This is Fourth</span>
+    </div>
+</body>
+</html>

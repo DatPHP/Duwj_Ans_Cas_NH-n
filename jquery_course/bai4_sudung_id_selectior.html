@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SU dung Id Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+      $(document).ready(function () {
+          var button = $("#button");
+          button.click(function(){
+             alert("ok!!!!");
+             button.css("color","red");
+             document.getElementById("button").style.backgroundColor = "yellow";
+          });
+      });
+  </script>
+    <button id = "button">Click Here!! </button>
+</body>
+</html>

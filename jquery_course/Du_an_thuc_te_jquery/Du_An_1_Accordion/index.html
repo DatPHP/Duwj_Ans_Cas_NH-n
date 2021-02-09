@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+    <!-- Nhung thu vien jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- Nhung js-->
+   <script type="text/javascript" src="min.js"> </script>
+    <!-- Nhung css -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+    <h1> Hieu ung Jquery</h1>
+    <p> Accordion </p>
+    <div class="hieuung">
+        <div class="motkhoi">
+            <h3>Xe khách giường nằm cháy ngùn ngụt giữa trưa, hành khách hoảng loạn tháo chạy
+            </h3>
+            <div class="ndmotkhoi">
+                <p>
+                    Vào khoảng 11h30 trưa 20/6, xe khách giường nằm loại 45 chỗ mang BKS 37B - 023.40 của nhà xe Ngọc Dũng lưu thông hướng Bắc - Nam. Khi lưu thông trên quốc lộ 1A, tới giữa cầu Nguyệt Viên (TP.Thanh Hóa, tỉnh Thanh Hóa), tài xế phát hiện khói bốc lên từ khu vực đầu xe.
+
+Khi tài xế dừng xe xuống kiểm tra thì lửa đã bốc lên dữ dội. Lúc này, tài xế đã hô hoán hành khách nhanh chóng rời khỏi xe. Ít phút sau, ngọn lửa đã bao trùm cả chiếc xe.
+                </p>
+            </div>
+        </div> 
+        <!-- end mot khoi  -->
+        <div class="hieuung">
+            <div class="motkhoi">
+                <h3>Ca sĩ Đan Trường hỗ trợ thầy giáo dạy Toán trở lại với âm nhạc
+                </h3>
+                <div class="ndmotkhoi">
+                    <p>
+                        Sau thời gian im ắng trong nghệ thuật để tập trung cho việc giảng dạy, ca sĩ từng làm mừa làm gió trong các cuốn băng Mưa bụi - Mai Tuấn trở lại âm nhạc bằng video album nhạc trữ tình mang tên Mai Tuấn và lục hổ tranh hùng với sự góp mặt của Đan Trường, Lâm Bảo Phi, Lê Sang, Đoàn Minh, Trường Sơn, Huỳnh Thật.
+                </div>
+            </div> 
+            <!-- end mot khoi  -->
+            <div class="hieuung">
+                <div class="motkhoi">
+                    <h3> 
+                        Phi công Anh xin xuất viện sớm về nước
+                    </h3>
+                    <div class="ndmotkhoi">
+                        <p>
+                            Bác sĩ đánh giá phi công Anh về nước lúc này là phù hợp, anh có thể ngồi xe lăn, có thể mua vé ngồi hạng thương gia kèm theo nhân viên y tế hộ tống, chi phí không nhiều.
+
+Phi công Anh xuất viện về nước chi phí do do công ty bảo hiểm chi trả hoặc Công ty bay 919, nơi bệnh nhân làm việc sẽ lo. Nếu 2 trường hợp trên không khả thi thì viện sẽ kêu gọi thêm các mạnh thường quân hỗ trợ.
+                        </p>
+                    </div>
+                </div> 
+                <!-- end mot khoi  -->
+
+
+    </div>
+</div>
+<style>
+.xanh
+{
+    background-color: seagreen;
+}
+</style>
+
+<script>
+    $(document).ready(function () {
+        $(function(){
+
+$('.ndmotkhoi').slideUp();
+});
+
+
+$('.motkhoi h3').click(function(event){
+//$('.ndmotkhoi').slideDown();
+$(this).next().slideToggle();
+$(this).toggleClass('xanh');
+});
+    });
+</script>
+</body>
+</html>

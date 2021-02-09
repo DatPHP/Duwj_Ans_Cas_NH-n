@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THao Tac Voi Element Qua Ten THe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .abc
+        {
+          color: blue;
+        }
+        </style>
+    <script>
+        
+        $(document).ready(function()
+        {
+            // ham dem so luong the cung nhu kiem tra Selector co ton tai hay khong 
+            //alert($('table').length);
+
+            // lay ra toan bo HTML cua bang table 
+            //alert($('table').html())
+
+            // lay ra toan bo text cua table 
+            //alert($('table').text())
+
+            // xet thuoc tinh cho selector 
+           // $('table').css('background-color','yellow');
+
+
+           // xet cho tung thuoc tinh  thuoc tinh
+           // even: chan    odd: le
+           /*
+           $('table tr:odd').css('background-color','green');
+           $('table tr:even').css('background-color','yellow');
+           */
+           // ket hop id voi Ten the 
+           $('#table1 tr td:odd').css('background-color','green');
+           $('#table1 tr td:even').css('background-color','yellow');
+
+
+           // lap qua tung dong tr cua bang voi each()
+
+           /*
+           $('table tr').each(function(){
+
+               // them cac cau lenh dieu kien khi lap qua tung selector 
+               if($(this).find('td:first').text() == 'Subject')
+               {
+                alert($(this).html())
+               }
+           });
+
+           */
+
+         // lay ra tr cuoi cung 
+           
+           // them class cho selector 
+           $('table tr:last').each(function(){
+            $(this).addClass('abc');
+            alert($(this).html())
+            });
+             
+
+
+            // laty ra tr chan thoi     :even  :odd le 
+            /*
+            $('table tr:even').each(function(){
+            alert($(this).html())
+            });
+            */
+
+
+        });
+    </script>
+    <table id = "table1" border="1px solid"> 
+        <tr>
+            <td>Subject</td>
+            <td> Score </td>
+            <td> price </td>
+            <td> mentor </td>
+            <td> level </td>
+        </tr>
+        <tr>
+            <td>PHP</td>
+            <td> 8</td>
+            <td> 15$ </td>
+            <td> NGuyen A </td>
+            <td> 2 </td>
+        </tr>
+
+        <tr>
+            <td>PHP</td>
+            <td> 8</td>
+            <td> 15$ </td>
+            <td> NGuyen A </td>
+            <td> 2 </td>
+        </tr>
+        <tr>
+            <td>PHP</td>
+            <td> 8</td>
+            <td> 15$ </td>
+            <td> NGuyen A </td>
+            <td> 2 </td>
+        </tr>
+        <tr>
+            <td>Laravel </td>
+            <td> 8</td>
+            <td> 18$ </td>
+            <td> NGuyen B </td>
+            <td> 3 </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <ul>
+        <li>Apple</li>
+        <li>Lemon</li>
+        <li>Strawberry</li>
+        <li>Potatoes</li>
+    </ul>
+
+
+    <!-- <table id = "table2" border="1px solid"> 
+        <tr>
+            <td>Chu De </td>
+            <td> Diem </td>
+            <td> Gia </td>
+        </tr>
+        <tr>
+            <td>PHP</td>
+            <td> 8</td>
+            <td> 15$ </td>
+        </tr>
+
+        <tr>
+            <td>Django</td>
+            <td> 9 </td>
+            <td> 20$ </td>
+        </tr>
+    </table> -->
+
+    <div>
+        <a href="google.com"></a>
+    </div>
+
+        <a href="google.com"></a>
+
+    
+</body>
+</html>

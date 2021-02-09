@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery- Toan Tu So Sanh</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .myborder
+        {
+            border: 1px solid red;
+
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            // div co title = div1
+            //$('div[title|="div1"]').addClass('myborder');
+
+            //div co title ket thuc bang 2
+           // $('div[title$="2"]').addClass('myborder');
+
+            //div co title bat dau 
+            $('div[title^="a"]').addClass('myborder');
+
+            //div co title co ky tu iv
+            $('div[title*="iv"]').addClass('myborder');
+
+        })
+
+    </script>
+    <div class ="demo1" title = "div1"> 
+        <span title = "abc">This is first!!! </span>
+    </div>
+    <div class ="demo" title = "div2"> 
+        <span>THis is Second!!! </span>
+    </div>
+    <div class ="demo" title = "div2"> 
+        <span>This is Third!!!! </span>
+    </div>
+    <div class ="demo" title = "div3"> 
+        <span>THis is Fourth!!! </span>
+    </div>
+    <div class ="demo" title = "abc"> 
+        <span>THis is Fourth!!! </span>
+    </div>
+    
+</body>
+</html>
